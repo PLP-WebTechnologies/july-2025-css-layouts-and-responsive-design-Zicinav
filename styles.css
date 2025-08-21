@@ -1,0 +1,112 @@
+/* ====== Base Styles ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ====== Header ====== */
+header {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ====== Navigation (Flexbox) ====== */
+nav {
+  background: #444;
+}
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0.5rem;
+}
+.nav-links li {
+  margin: 0 1rem;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ====== Main Layout (Grid) ====== */
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* ====== Content ====== */
+.content {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* ====== Cards (Flexbox inside Content) ====== */
+.card-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.card {
+  flex: 1;
+  background: #ddd;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* ====== Sidebar ====== */
+.sidebar {
+  background: #eaeaea;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* ====== Footer ====== */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* ====== Responsive Media Queries ====== */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .card-container {
+    flex-direction: column;
+  }
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .card {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+}
